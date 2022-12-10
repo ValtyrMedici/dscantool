@@ -371,7 +371,7 @@ def show(request, token):
 # Prettier error handling
 def error404(request, exception, template_name=""):
     token = escape(request.path[1:])
-    return render(request, "landing.html", {"error": "<h5>Error 404 - Not Found</h5><br>Could not find a saved scan with the token \""+token+"\"."}, status=404)
+    return render(request, "landing.html", {"error": "<h5>Error404 - Not Found</h5><br>Could not find a saved scan with the token \""+token+"\"."}, status=404)
 
 def error500(request, exception=None, template_name=""):
     print("ERROR 500 on ", request.method, request.path)
